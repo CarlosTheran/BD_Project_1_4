@@ -29,6 +29,6 @@ public class TwitterRetweetsReducer extends Reducer<Text, Text, Text, Text> {
         result = result + " ]";
 
         context.write(key, new Text(result ));
-
+//5548
     }
 }
