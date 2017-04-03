@@ -33,8 +33,12 @@ public class TwitterKeyDriver {
         job.setReducerClass(Part4.TwitterRetweetsReducer.class);
         //job.setCombinerClass(edu.uprm.cse.bigdata.mrsp02.TwitterReduceByScreenName.class);
 
+        job.setMapOutputKeyClass(Text.class);
+        job.setMapOutputValueClass(Text.class);
+
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
+        job.setOutputValueClass(Text.class);
+
 
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
